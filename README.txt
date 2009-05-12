@@ -25,5 +25,13 @@
 
     Now you have perl5.11.0 in your path.
 
-4.  Run: prove -e perl5.11.0
+4.  Read the smartmatch spec defined in the pod.
+    
+    $ perldoc perlsyn
+
+    Grep for "Smart matching in detail"
+
+5.  Write tests exploiting behaviors defined in perlsyn
+
+6.  Run: prove -e perl5.11.0
 
