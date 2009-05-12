@@ -9,7 +9,7 @@
 
 2.  Check out the smartmatch branch.
 
-    $ git checkout smartmatch
+    $ git checkout origin/smartmatch
 
     You should make sure you're pretty up to date.  This command, for example,
     should print 1:
