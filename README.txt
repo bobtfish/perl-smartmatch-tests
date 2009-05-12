@@ -1,17 +1,29 @@
 
 ## Testing Out the New ~~
 
-  15:39 <@rgs> make sure you forked from latest commit in smartmatch
-  15:39 <@rgs> that is, ea0c2dbd5f5ac6845ecc7ec6696415bf8e27bd52
+1.  Clone the perl5 git repository:
 
-  Compile that perl.  RJBS does:
+    $ git clone git://perl5.git.perl.org/perl.git
 
-    * ./Configure -de -Dusedevel
-    * make -j9
-    * make test -j9
-    * sudo make install
+    ...that may take a few minutes, the first time.
 
-  Now you have perl5.11.0 in your path.
+2.  Check out the smartmatch branch.
 
-  Run: prove -e perl5.11.0
+    $ git checkout smartmatch
+
+    You should make sure you're pretty up to date.  This command, for example,
+    should print 1:
+
+    $ git log | grep -c ea0c2dbd5f5ac6845ecc7ec6696415bf8e27bd52
+
+3.  Compile that perl.  RJBS does:
+
+      * ./Configure -de -Dusedevel
+      * make -j9
+      * make test -j9
+      * sudo make install
+
+    Now you have perl5.11.0 in your path.
+
+4.  Run: prove -e perl5.11.0
 
