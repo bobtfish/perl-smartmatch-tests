@@ -16,7 +16,7 @@ use Test::More 'no_plan';
   ok(undef ~~ $x, "everything matches Smartmatch::Recorder obj");
   is_deeply(
     \@Smartmatch::Recorder::Recorded,
-    [ $x, undef ],
+    [ $x, undef, 1],
     "just the expected args to our OL sub"
   );
 }
