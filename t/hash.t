@@ -21,7 +21,7 @@ use Tie::RefHash;
 
   {
     tie my %h, 'Tie::RefHash';
-    $h{ $x } = 0;
+    $h{ $x } = 1;
   
     my ($key) = keys %h;
     isa_ok($key, 'Smartmatch::Thingie'); # key is still an obj
@@ -30,5 +30,7 @@ use Tie::RefHash;
     my $err = $@;
     ok(!$ok, q{can't %h~~%h if keys include non-OL objects});
     like($err, qr{non-overloaded object}, "can't %h~~%h with non-OL obj keys");
+
+    ok([$x]~~%h, 'obj $x is a key of %h');
   }
 }
