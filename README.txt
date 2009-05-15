@@ -19,8 +19,8 @@
 3.  Compile that perl.  RJBS does:
 
       * ./Configure -de -Dusedevel
-      * make -j9
-      * make test -j9
+      * make -j2
+      * make test -j2
       * sudo make install
 
     Now you have perl5.11.0 in your path.
