@@ -33,5 +33,10 @@
 
 5.  Write tests exploiting behaviors defined in perlsyn
 
+    Tests are organized into files in ./t *generally* based on the type of
+    value on the right hand side of the ~~.  You should feel free to put your
+    tests wherever you want.  Nobody is going to be upset because of where it
+    is.  More tests is better.
+
 6.  Run: prove -e perl5.11.0
 
