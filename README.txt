@@ -76,3 +76,26 @@ This will produce output like:
 Copy and paste this into your terminal. You now have checked out copies of perl to build,
 and these tests.
 
+## Simple instructions:
+
+Install git:
+
+   $ apt-get install git # If you're not using debian, tough :_)
+
+Clone perl:
+
+   $ git clone git://perl5.git.perl.org/perl.git
+
+Get a github account at www.github.com, then click the 'Fork' button on
+http://github.com/rjbs/perl-smartmatch-tests/tree/master
+
+You'll be taken to your own copy of this repository.
+
+Click the text next to 'Your Clone URL'. This will lightbox the git command you need to run,
+e.g.
+
+    git clone git@github.com:bobtfish/perl-smartmatch-tests.git 
+
+Copy and paste this into your terminal. You now have checked out copies of perl to build,
+and these tests.
+
