@@ -40,62 +40,67 @@
 
 6.  Run: prove -e perl5.11.0
 
-## Simple instructions:
+## Simple instructions for git / github newbies:
 
-Generate an ssh key if you don't have one already:
+Install git:
+
+   $ apt-get install git # If you're not using debian, tough :_)
+
+Clone perl:
+
+   $ git clone git://perl5.git.perl.org/perl.git
+
+### I want a github account
+
+Go to htp://www.github.com, click 'Pricing and Signup', click 'Open Source'.
+
+Follow registration through to get a username and password registered.
+
+If you don't have an ssh key already, generate one with:
 
    $ ssh-keygen
 
-Install git:
+The file will be in ~/.ssh/id_rsa.pub
 
-   $ apt-get install git # If you're not using debian, tough :_)
+Login to github. Add your ssh key to github by clicking XXX
 
-Clone perl:
+Go to: http://github.com/rjbs/perl-smartmatch-tests/tree/master
 
-   $ git clone git://perl5.git.perl.org/perl.git
-
-Get a github account at www.github.com, add your ssh key (found in ~/.ssh/id_dsa.pub)
-then click the 'Fork' button on http://github.com/rjbs/perl-smartmatch-tests/tree/master
+Click the 'Fork' button
 
 You'll be taken to your own copy of this repository.
 
 Click the text next to 'Your Clone URL'. This will lightbox the git command you need to run,
 e.g.
 
-    git clone git@github.com:bobtfish/perl-smartmatch-tests.git 
+    $ git clone git@github.com:bobtfish/perl-smartmatch-tests.git 
 
-This will produce output like:
+Copy and paste this into your terminal. You now have checked out copy of
+these tests. You can commit (git add file1 file2 & git commit), then upload
+your work to github (git push), then click 'Send Pull request' in the web form,
+and a dialog box will pop up asking you to write a mail. Write a brief
+description of your changes and send.
 
-    mini git $ git clone git@github.com:bobtfish/perl-smartmatch-tests.git
-    Enter passphrase for key '/Users/t0m/.ssh/id_dsa': 
-    remote: Counting objects: 7, done.
-    remote: Compressing objects: 100% (5/5), done.
-    remote: Total 7 (delta 0), reused 0 (delta 0)
-    Receiving objects: 100% (7/7), done.
+jrbs will get your message and either integrate the work you've done, or send
+you some feedback.
 
-Copy and paste this into your terminal. You now have checked out copies of perl to build,
-and these tests.
+### I don't want a github account
 
-## Simple instructions:
+That's fine!
 
-Install git:
+    $ git clone git@github.com:rjbs/perl-smartmatch-tests.git
 
-   $ apt-get install git # If you're not using debian, tough :_)
+This will check out a readonly copy of the repository. Add tests and commit
+(git add file1 file2 & git commit), possibly multiple times. When you want to
+submit your work, then say 'git log'.
 
-Clone perl:
+Note the sha1 hash below your first commit message.
 
-   $ git clone git://perl5.git.perl.org/perl.git
+    $ git format-patch <sha1sum>
 
-Get a github account at www.github.com, then click the 'Fork' button on
-http://github.com/rjbs/perl-smartmatch-tests/tree/master
+Each change you made will be written out as a file similarly named to the
+commit message, e.g. 0001-Smartmatch-test-Foo.diff
 
-You'll be taken to your own copy of this repository.
+Mail these diffs as attachments to rjbs for application.
 
-Click the text next to 'Your Clone URL'. This will lightbox the git command you need to run,
-e.g.
-
-    git clone git@github.com:bobtfish/perl-smartmatch-tests.git 
-
-Copy and paste this into your terminal. You now have checked out copies of perl to build,
-and these tests.
 
